@@ -3,7 +3,7 @@
 import { ReactNode, Suspense } from "react";
 import { Canvas as R3FCanvas } from "@react-three/fiber";
 import { Loader } from "@react-three/drei";
-import { Scene } from "./Scene";
+import Scene from "./Scene";
 
 interface CanvasProps {
   children?: ReactNode;

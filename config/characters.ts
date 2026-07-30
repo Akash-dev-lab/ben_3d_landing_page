@@ -2,15 +2,6 @@ import { CharacterConfig } from "@/types/character";
 
 export const characters: CharacterConfig[] = [
   {
-    id: "heatblast",
-    name: "Heatblast",
-    model: "/models/draco/heatblast_silhouette_draco_final.glb",
-    silhouette: "/models/silhouettes/heatblast_silhouette.glb",
-    scale: 1,
-    position: [0, 0, 0],
-    rotation: [0, 0, 0]
-  },
-  {
     id: "cannonbolt",
     name: "Cannonbolt",
     model: "/models/draco/cannonbolt_silhouette_draco_final.glb",

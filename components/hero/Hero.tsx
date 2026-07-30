@@ -1,5 +1,10 @@
-import HeroLayout from "@/components/hero/HeroLayout";
+import HeroLayout from "./HeroLayout";
+import { HeroProvider } from "@/context/HeroContext";
 
 export default function Hero() {
-    return <HeroLayout />;
+    return (
+        <HeroProvider>
+            <HeroLayout />
+        </HeroProvider>
+    );
 }

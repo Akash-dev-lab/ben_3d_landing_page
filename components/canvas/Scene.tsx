@@ -1,22 +1,33 @@
-"use client";
+"use client"
 
-import React, { ReactNode } from "react";
 import { OrbitControls } from "@react-three/drei";
+
 import { Lights } from "./Lights";
 import { Environment } from "./Environment";
+import Stage from "./Stage";
+import { Suspense } from "react";
+import CanvasLoader from "./CanvasLoader";
 
-interface SceneProps {
-  children?: ReactNode;
-}
+type SceneProps = {
+  children?: React.ReactNode;
+};
 
-export function Scene({ children }: SceneProps) {
+export default function Scene({
+  children,
+}: SceneProps) {
   return (
     <>
       <Lights />
+
       <Environment />
-      <OrbitControls makeDefault />
-      {children}
+
+      <OrbitControls />
+
+      <Stage>
+        <Suspense fallback={<CanvasLoader />}>
+          {children}
+        </Suspense>
+      </Stage>
     </>
   );
 }
-
