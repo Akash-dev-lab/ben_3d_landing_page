@@ -13,8 +13,9 @@ export default function HeroCanvas() {
                     <SceneErrorBoundary>
                         <AssetManager />
                         <CameraController />
-                        <CharacterManager />
-                        <Scene />
+                        <Scene>
+                            <CharacterManager />
+                        </Scene>
                     </SceneErrorBoundary>
                 </Canvas>
             </div>
